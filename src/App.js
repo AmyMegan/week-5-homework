@@ -5,7 +5,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>
-      Weather App
+      Weather App 
         </h1>
     </div>
   );
