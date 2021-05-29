@@ -1,3 +1,60 @@
-h1 {
-  font-size: 40px;
+.container {
+  font-family: 'Playfair Display', serif;
+  background-color: #7ddef2;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+form {
+text-align: center;
+}
+
+h2 {
+text-align: center;
+}
+
+h4 {
+ text-align: right;
+}
+
+.current-weather-data-here {
+text-align: left;
+margin: 0;
+}
+
+.humidity {
+text-align: center;
+list-style-type: none;
+margin: 0 auto;
+height: 50px;
+width: 50px;
+}
+
+.wind-tag {
+text-align: center;
+list-style-type: none;
+margin: 0 auto;
+height: 50px;
+width: 50px;
+}
+
+.humidity-tag {
+text-align: center;
+list-style-type: none;
+margin: 0 auto;
+height: 50px;
+width: 50px;
+
+}
+
+.wind {
+  text-align: center;
+  list-style-type: none;
+  margin: 0 auto;
+  height: 50px;
+  width: 50px;
+}
+
+footer {
+text-align: center;
 }
