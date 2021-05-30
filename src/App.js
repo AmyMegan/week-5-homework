@@ -11,7 +11,7 @@ export default function App() {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-      iconUrl: "http://openweathermap.org/img/wn/10d@2x.png",    
+      iconUrl: "http://openweathermap.org/img/wn/01d@2x.png",
       city: response.data.name,
       date: "Sunday 9:40pm"
     });
@@ -42,10 +42,11 @@ export default function App() {
         <h4>
           {weatherData.date}
         </h4>
+        
          <h1 className="current-weather-data-here">
            {weatherData.iconUrl} {Math.round(weatherData.temperature)}°c
            <p className="current-weather-data-information"> 
-               {weatherData.description}
+             {weatherData.description}
            </p>
          </h1>
          <ul>
