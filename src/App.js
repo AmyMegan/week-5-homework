@@ -58,7 +58,7 @@ setCity(event.target.value);
   } else {
     const apiKey = "7a56de110c21e2a9b823cd23ef62bce1";
     let city = "New York"
-    let apiURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+    let apiURL = `http://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`
     axios.get(apiURL).then(handleResponse);
   }
 return "Loading..."
