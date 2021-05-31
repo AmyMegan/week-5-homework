@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import axios from 'axios';
-import dateFormatted from "./dateFormatted";
+import WeatherInfo from "./WeatherInfo";
 import './App.css';
 
 export default function App() {
   const[weatherData, setWeatherData] = useState({ready: false});
+  const[city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
-    console.log(response.data)
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
@@ -19,17 +19,29 @@ export default function App() {
     });
     
   }
+
+function handleSubmit(event) {
+  event.preventDefault();
+}
+
+
+function handleCityChange(event){
+setCity(event.target.value);
+}
+
   if (weatherData.ready) {
     return (
       <div className="App">
           <div className="container">
-        <form>
+            <App defaultCity="New York"/>
+        <form onSubmit={handleSubmit}>
           <input
             type="text"
             placeHolder="Enter City"
             autoFocus="on"
             size="50"
             px
+            onChange={handleCityChange}
           />
           <button type="submit" className="btn btn-info">
             🔎
@@ -38,53 +50,7 @@ export default function App() {
             📍
           </button>
         </form>
-        <h2>
-        {weatherData.city}
-        </h2>
-        <h4>
-          <dateFormatted date={weatherData.date} />
-        </h4>
-        
-         <h1 className="current-weather-data-here">
-           {weatherData.iconUrl} {Math.round(weatherData.temperature)}°c
-           <p className="current-weather-data-information"> 
-             {weatherData.description}
-           </p>
-         </h1>
-         <ul>
-         <p className="humidity-tag"> 
-         {(weatherData.humidity)} %
-         </p>
-           <li className="humidity"> 
-           <img src="https://www.svgrepo.com/show/26690/humidity.svg" alt="weather icon"></img>
-           </li>
-           <li className="wind">
-           <img src="https://www.svgrepo.com/show/87983/wind.svg" alt="weather icon"></img>
-           <p className="wind-tag"> {(weatherData.wind)} MPH</p>
-           </li>
-
-         </ul>
-         
-         <img src="http://openweathermap.org/img/wn/01d@2x.png" className="img-thumbnail" alt="weather icon" ></img> 
-         <img src="http://openweathermap.org/img/wn/02n@2x.png" className="img-thumbnail" alt="weather icon" ></img> 
-         <img src="http://openweathermap.org/img/wn/10d@2x.png" className="img-thumbnail" alt="weather icon" ></img> 
-        
-         <br />
-         <footer>
-            This was coded by <a 
-            href = "https://www.linkedin.com/in/amy-costall-a1ba46131/"
-            rel="noreferrer"
-            target="_blank"> 
-            Amy Megan 
-            </a>
-            {" "} and is {" "}
-          <a 
-          href="https://github.com/AmyMegan"
-          rel="noreferrer"
-          target="_blank"> 
-          open-sourced
-          </a> 
-          </footer>
+        <WeatherInfo data={weatherData}/>
           </div>
       </div>
     );
