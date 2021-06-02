@@ -1,5 +1,5 @@
 import React from "react";
-import DateFormatted from "./DateFormatted";
+import DateFormatted from "./dateformatted";
 
 
 export default function WeatherInfo(props) {
@@ -10,7 +10,8 @@ export default function WeatherInfo(props) {
         <h4>
           <DateFormatted date={props.data.date} />
         </h4>
-        
+        <img src= "http://openweathermap.org/img/wn/10d@2x.png"
+        alt="weather icons"></img>
          <h1 className="current-weather-data-here">
            {props.data.iconUrl} {Math.round(props.data.temperature)}°c
            <p className="current-weather-data-information"> 
