@@ -10,30 +10,26 @@ export default function WeatherInfo(props) {
         <h4>
           <DateFormatted date={props.data.date} />
         </h4>
-        <img src= "http://openweathermap.org/img/wn/10d@2x.png"
-        alt="weather icons"></img>
+        <img src="http://openweathermap.org/img/wn/01d@2x.png" alt=""></img>
          <h1 className="current-weather-data-here">
-           {props.data.iconUrl} {Math.round(props.data.temperature)}°c
+          {Math.round(props.data.temperature)}°c
            <p className="current-weather-data-information"> 
-             {props.data.description}
+           {props.data.description}
            </p>
          </h1>
          <ul>
-         <p className="humidity-tag"> 
-         {(props.data.humidity)} %
-         </p>
            <li className="humidity"> 
            <img src="https://www.svgrepo.com/show/26690/humidity.svg" alt="weather icon"></img>
            </li>
+           <p className="humidity-tag"> 
+         {(props.data.humidity)} %
+         </p>
            <li className="wind">
            <img src="https://www.svgrepo.com/show/87983/wind.svg" alt="weather icon"></img>
            <p className="wind-tag"> {(props.data.wind)} MPH</p>
            </li>
 
          </ul>
-         <img src="http://openweathermap.org/img/wn/01d@2x.png" className="img-thumbnail" alt="weather icon" ></img> 
-         <img src="http://openweathermap.org/img/wn/02n@2x.png" className="img-thumbnail" alt="weather icon" ></img> 
-         <img src="http://openweathermap.org/img/wn/10d@2x.png" className="img-thumbnail" alt="weather icon" ></img> 
         
          <br />
          <footer>

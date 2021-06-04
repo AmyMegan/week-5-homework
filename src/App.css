@@ -27,11 +27,20 @@ margin: 0;
 text-align: center;
 list-style-type: none;
 margin: 0 auto;
-height: 50px;
-width: 50px;
+height: 70px;
+width: 70px;
+}
+
+.wind {
+  text-align: center;
+  list-style-type: none;
+  margin: 0 auto;
+  height: 70px;
+  width: 70px;
 }
 
 .wind-tag {
+  font-size: 20px;
 text-align: center;
 list-style-type: none;
 margin: 0 auto;
@@ -40,20 +49,13 @@ width: 50px;
 }
 
 .humidity-tag {
+font-size: 20px;
 text-align: center;
 list-style-type: none;
 margin: 0 auto;
 height: 20px;
 width: 50px;
 
-}
-
-.wind {
-  text-align: center;
-  list-style-type: none;
-  margin: 0 auto;
-  height: 50px;
-  width: 50px;
 }
 
 footer {
