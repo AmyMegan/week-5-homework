@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import DailyWeatherForecast from "./DailyWeatherForecast"
 import "./App.css";
 export default function App(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -12,8 +13,7 @@ export default function App(props) {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}`,
-      city: response.data.name,
+      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,      city: response.data.name,
       date: new Date(response.data.dt * 1000),
     });
     
@@ -52,6 +52,7 @@ function search() {
             </button>
           </form>
           <WeatherInfo data={weatherData} />
+          <DailyWeatherForecast />
         </div>
       </div>
     );
