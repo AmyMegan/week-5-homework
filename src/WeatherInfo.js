@@ -12,7 +12,7 @@ export default function WeatherInfo(props) {
           <DateFormatted date={props.data.date} />
         </h4>
         <div className="float-left">
-        <WeatherIcon code={props.data.icon} size={90} />
+        <WeatherIcon code={props.data.icon} size={290} />
         </div>
          <h1 className="current-weather-data-here">
           {Math.round(props.data.temperature)}°c
@@ -20,19 +20,12 @@ export default function WeatherInfo(props) {
            {props.data.description}
            </p>
          </h1>
-         <ul>
-           <li className="humidity"> 
-           <img src="https://www.svgrepo.com/show/26690/humidity.svg" alt="weather icon"></img>
-           </li>
            <p className="humidity-tag"> 
-         {(props.data.humidity)} %
+           Humidity: {(props.data.humidity)} %
          </p>
-           <li className="wind">
-           <img src="https://www.svgrepo.com/show/87983/wind.svg" alt="weather icon"></img>
-           <p className="wind-tag"> {(props.data.wind)} MPH</p>
-           </li>
-
-         </ul>
+           <p className="wind-tag"> 
+           Wind: {(props.data.wind)} MPH 
+           </p>
         
          <br />
          <br />
