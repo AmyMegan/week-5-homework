@@ -1,0 +1,18 @@
+.DailyWeatherForcast {
+    text-align: left;
+    margin: 0 auto;
+}
+
+.Forcast-Day{
+    font-size: 30px;
+}
+.Forecast-Max {
+    font-size: 30px;
+    margin: 5px;
+}
+
+.Forecast-Min {
+   font-size: 30px;
+   opacity: 0.6;
+   margin: 5px;
+}
