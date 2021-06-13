@@ -2,25 +2,30 @@
   font-family: 'Playfair Display', serif;
   background-color: #ACE1AF;
   border-radius: 5px;
+  margin: 0 auto;
 }
 
 form {
 text-align: center;
+margin: 0 auto;
 }
 
 h2 {
 text-align: center;
 font-size: 50px;
+margin: 0 auto;
 }
 
 h4 {
  text-align: right;
+ margin: 0 auto;
 }
 
 .current-weather-data-here {
 text-align: left;
 font-size: 60px;
 margin: 0;
+
 }
 
 .humidity-tag {
@@ -28,6 +33,7 @@ margin: 0;
   text-align: center;
   position: relative;
   top: -200px;
+  
 }
 
 .wind-tag {
