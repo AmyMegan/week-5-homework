@@ -35,20 +35,6 @@ export default function WeatherInfo(props) {
          </ul>
         
          <br />
-         <footer>
-            This was coded by <a 
-            href = "https://www.linkedin.com/in/amy-costall-a1ba46131/"
-            rel="noreferrer"
-            target="_blank"> 
-            Amy Megan 
-            </a>
-            {" "} and is {" "}
-          <a 
-          href="https://github.com/AmyMegan"
-          rel="noreferrer"
-          target="_blank"> 
-          open-sourced
-          </a> 
-          </footer>
+         <br />
           </div>
         )};
